@@ -1,7 +1,6 @@
 ---
 - hosts: all
-  become: yes
-  tasks:
+   tasks:
   - name: Installling Apache
     yum:
       name: httpd
@@ -14,3 +13,4 @@
     service:
       name: httpd
       state: started
+  become: true
